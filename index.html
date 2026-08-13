@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yazdan Kafush - Performance Marketing &amp; Community Growth</title>
+<meta name="description" content="Berlin-based marketing specialist. Paid social across 20+ international clients, and a music community of 48,000+ built from scratch over 20 years.">
+<meta property="og:title" content="Yazdan Kafush - Performance Marketing &amp; Community Growth">
+<meta property="og:description" content="Paid social, content, and a 48,000-strong music community built from scratch.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b;
+  --bg-2:#121215;
+  --card:#16161a;
+  --line:#26262d;
+  --txt:#f4f4f5;
+  --muted:#9b9ba5;
+  --accent:#ff4d3d;
+  --accent-2:#ffd93d;
+  --max:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.mono{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.eyebrow{
+  font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:block
+}
+h2{font-size:clamp(28px,4.5vw,40px);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px}
+.lede{color:var(--muted);max-width:640px;margin-bottom:44px}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(10,10,11,.82);border-bottom:1px solid var(--line)
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.02em;text-decoration:none}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;font-size:14px}
+.navlinks a{color:var(--muted);text-decoration:none;transition:color .15s}
+.navlinks a:hover{color:var(--txt)}
+@media(max-width:720px){.navlinks{display:none}}
+
+/* HERO */
+.hero{padding:100px 0 84px;border-top:none;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-260px;right:-160px;width:620px;height:620px;
+  background:radial-gradient(circle,rgba(255,77,61,.20),transparent 66%);
+  filter:blur(46px);pointer-events:none
+}
+.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.03;letter-spacing:-.035em;margin-bottom:22px;position:relative}
+.hero h1 em{font-style:normal;color:var(--accent)}
+@media(max-width:640px){.hero h1 br{display:none}}
+.hero p.sub{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:620px;margin-bottom:34px}
+.loc{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--muted);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.15)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;
+  font-weight:600;font-size:15px;transition:transform .15s,opacity .15s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--accent);color:#fff}
+.btn-s{border:1px solid var(--line);color:var(--txt)}
+.btn-s:hover{border-color:var(--muted)}
+
+/* STAT BAR */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:64px}
+.stat{background:var(--bg-2);padding:26px 22px}
+.stat .n{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.stat .l{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.4}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* WHAT I DO */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#3a3a44;transform:translateY(-3px)}
+.card .ico{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.1em;margin-bottom:14px;display:block}
+.card h3{font-size:20px;letter-spacing:-.01em;margin-bottom:10px}
+.card p{font-size:15px;color:var(--muted);line-height:1.6}
+.card ul{list-style:none;margin-top:16px;font-size:14px;color:var(--muted)}
+.card ul li{padding:5px 0 5px 16px;position:relative}
+.card ul li::before{content:"";position:absolute;left:0;top:14px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* CASE STUDIES */
+.case{
+  display:grid;grid-template-columns:200px 1fr;gap:36px;
+  padding:34px 0;border-bottom:1px solid var(--line)
+}
+.case:last-child{border-bottom:none}
+@media(max-width:800px){.case{grid-template-columns:1fr;gap:14px}}
+.case .meta .role{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;line-height:1.3}
+.case .meta .org{color:var(--accent);font-size:14px;margin-top:3px}
+.case .meta .when{color:var(--muted);font-size:13px;margin-top:5px}
+.case .body p{color:var(--muted);font-size:15.5px;margin-bottom:18px}
+.kpis{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:16px}
+.kpi .n{font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;color:var(--accent-2);line-height:1.1}
+.kpi .l{font-size:12.5px;color:var(--muted);margin-top:2px}
+.case ul{list-style:none;font-size:15px;color:var(--muted)}
+.case ul li{padding:5px 0 5px 18px;position:relative}
+.case ul li::before{content:"→";position:absolute;left:0;color:var(--accent);font-size:13px}
+
+/* BLOG PANEL */
+.blogpanel{
+  background:linear-gradient(135deg,#1a1015,var(--card));
+  border:1px solid var(--line);border-radius:16px;padding:38px
+}
+.chan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:700px){.chan{grid-template-columns:repeat(2,1fr)}}
+.ch{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:16px}
+.ch .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px}
+.ch .l{font-size:12.5px;color:var(--muted);margin-top:2px}
+
+/* SKILLS */
+.skillgroup{margin-bottom:30px}
+.skillgroup h4{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{
+  background:var(--card);border:1px solid var(--line);border-radius:100px;
+  padding:7px 15px;font-size:13.5px;color:#d4d4dc
+}
+.tag.hot{border-color:rgba(255,77,61,.45);color:var(--txt)}
+
+/* CONTACT */
+.contact{text-align:center;padding:96px 0}
+.contact h2{max-width:620px;margin:0 auto 16px}
+.contact .lede{margin:0 auto 34px}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Yazdan Kafush<span>.</span></a>
+    <div class="navlinks">
+      <a href="#work">What I do</a>
+      <a href="#cases">Case studies</a>
+      <a href="#blog">The blog</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero wrap" id="top">
+  <div class="loc"><span class="dot"></span> Berlin, Germany - open to full-time &amp; freelance</div>
+  <h1>Most marketers can run the ads <em>or</em> write the copy.<br>I do <em>both</em>.</h1>
+  <p class="sub">Performance marketer with a physicist's approach to data and a 20-year track record of building an audience from zero. I've run paid social for 20+ international clients, and grown a music publication to 48,000+ followers across six channels without spending a euro on ads.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="mailto:yazdan.mohammadjani@gmail.com">Get in touch</a>
+    <a class="btn btn-s" href="https://www.linkedin.com/in/yazdankm/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">20+</div><div class="l">International clients on paid social</div></div>
+    <div class="stat"><div class="n">+15%</div><div class="l">Average ROAS lift across accounts</div></div>
+    <div class="stat"><div class="n">−20%</div><div class="l">Cost per acquisition through testing</div></div>
+    <div class="stat"><div class="n">48K+</div><div class="l">Owned community built from scratch</div></div>
+  </div>
+</header>
+
+<!-- WHAT I DO -->
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow">What I do</span>
+    <h2>Three things, done properly.</h2>
+    <p class="lede">Most marketers are strong on one side, the spreadsheet or the story. I've spent a decade on both, which is why the campaigns I run tend to survive contact with the data.</p>
+
+    <div class="grid3">
+      <div class="card">
+        <span class="ico">01</span>
+        <h3>Paid social &amp; performance</h3>
+        <p>Full-funnel campaign management across Meta, Google, TikTok and LinkedIn, from account structure and audience strategy to creative testing and budget reallocation.</p>
+        <ul>
+          <li>Meta Ads Manager, Google Ads, TikTok, LinkedIn</li>
+          <li>A/B testing &amp; incrementality thinking</li>
+          <li>CPA, ROAS, CTR, CVR optimisation</li>
+          <li>Awareness → traffic → conversion objectives</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="ico">02</span>
+        <h3>Analytics &amp; reporting</h3>
+        <p>An MSc in computational physics means I don't guess. I build the dashboards, run the numbers, and tell you which half of the budget is actually working.</p>
+        <ul>
+          <li>Python (Pandas, NumPy), SQL, Tableau, Power BI</li>
+          <li>Weekly client-facing performance dashboards</li>
+          <li>Audience segmentation &amp; cohort analysis</li>
+          <li>Google Data Analytics &amp; BI certified</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="ico">03</span>
+        <h3>Content &amp; community</h3>
+        <p>Twenty years of publishing has taught me what paid media can't buy: an audience that comes back on its own. I write, edit, produce and moderate, at volume.</p>
+        <ul>
+          <li>Editorial strategy &amp; brand storytelling</li>
+          <li>Multi-channel distribution &amp; newsletter</li>
+          <li>Community management &amp; moderation at scale</li>
+          <li>Organic growth, SEO, social SEO</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="wrap">
+    <span class="eyebrow">Selected work</span>
+    <h2>Case studies</h2>
+    <p class="lede">Three pieces of work that cover the range: paid media at scale, an audience built from nothing, and a full e-commerce growth loop.</p>
+
+    <article class="case">
+      <div class="meta">
+        <div class="role">Social Media Marketing Consultant</div>
+        <div class="org">Concentrix</div>
+        <div class="when">Aug 2024 - Present · Berlin</div>
+      </div>
+      <div class="body">
+        <p><strong>The brief:</strong> manage and optimise Meta Ads for a portfolio of 20+ SMB clients across North America, Europe and Asia, each with different budgets, markets, objectives and levels of marketing maturity.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="n">+30%</div><div class="l">Engagement rate</div></div>
+          <div class="kpi"><div class="n">+25%</div><div class="l">Conversion rate</div></div>
+          <div class="kpi"><div class="n">+15%</div><div class="l">Average ROAS</div></div>
+          <div class="kpi"><div class="n">92%+</div><div class="l">Client satisfaction</div></div>
+        </div>
+        <ul>
+          <li>Rebuilt account structures and audience segmentation, cutting CPA by 20% through systematic A/B testing of creative, placement and targeting.</li>
+          <li>Shipped weekly performance dashboards in Meta Business Suite and Google Sheets so clients could see the decision, not just the number.</li>
+          <li>Trained and onboarded 5 new consultants, team service quality up 35% within two months.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">
+        <div class="role">Founder, Editor &amp; Community Lead</div>
+        <div class="org">yazdankm.wordpress.com</div>
+        <div class="when">2006 - Present · Independent</div>
+      </div>
+      <div class="body">
+        <p><strong>The brief:</strong> none. This one is mine. A music blog I started twenty years ago and never stopped, now a publication with a 48,000-strong owned audience, built entirely organically, that gets me invited to events by artists and record labels.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="n">250K+</div><div class="l">Total visits</div></div>
+          <div class="kpi"><div class="n">65K+</div><div class="l">Unique visitors</div></div>
+          <div class="kpi"><div class="n">48K+</div><div class="l">Community across channels</div></div>
+          <div class="kpi"><div class="n">€0</div><div class="l">Spent on acquisition</div></div>
+        </div>
+        <ul>
+          <li>Grew a 30,000-member Telegram channel, a 10,000-member Facebook group and a 3,000-subscriber newsletter, three distinct formats, three distinct editorial rhythms.</li>
+          <li>Proof that I can do the unglamorous part: publish consistently for two decades and keep people coming back.</li>
+          <li>Direct relationships with artists and labels; regular invitations to industry events in Berlin and beyond.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">
+        <div class="role">Social Media Marketing Manager</div>
+        <div class="org">Madelta</div>
+        <div class="when">Jan 2016 - Sep 2017 · Iran</div>
+      </div>
+      <div class="body">
+        <p><strong>The brief:</strong> own the full growth loop for a consumer e-commerce brand: research, content, paid, storefront and analytics. One person, every channel.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="n">+29%</div><div class="l">Online sales</div></div>
+          <div class="kpi"><div class="n">+35%</div><div class="l">Orders during launches</div></div>
+          <div class="kpi"><div class="n">5K/day</div><div class="l">Site traffic</div></div>
+          <div class="kpi"><div class="n">−18%</div><div class="l">Bounce rate</div></div>
+        </div>
+        <ul>
+          <li>Ran market research and audience segmentation in Google Analytics and Meta Business Suite to find the high-value customer groups worth spending against.</li>
+          <li>Produced and scheduled 20+ posts a day across Instagram, Twitter and Telegram, informed by engagement data rather than gut feel.</li>
+          <li>Rebuilt the storefront with SEO-driven copy, promo banners and UX fixes, traffic to 5,000 daily visitors, CPA down 25%.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="wrap">
+    <span class="eyebrow">Owned audience</span>
+    <h2>Twenty years of showing up.</h2>
+    <p class="lede">The clearest thing on my CV isn't a job. It's a music blog I've run since 2006, and the community that grew around it.</p>
+
+    <div class="blogpanel">
+      <p style="color:var(--muted);max-width:640px">Music is why I moved to Berlin. The blog started as a place to write about records I loved and became a publication with a real readership, one that artists and labels now pay attention to. Every follower was earned with editorial, not budget, which is the hardest kind of growth there is.</p>
+      <div class="chan">
+        <div class="ch"><div class="n">30,000</div><div class="l">Telegram subscribers</div></div>
+        <div class="ch"><div class="n">10,000</div><div class="l">Facebook group members</div></div>
+        <div class="ch"><div class="n">5,000</div><div class="l">Instagram followers</div></div>
+        <div class="ch"><div class="n">3,000</div><div class="l">Newsletter subscribers</div></div>
+        <div class="ch"><div class="n">2,000</div><div class="l">X / Twitter followers</div></div>
+        <div class="ch"><div class="n">250,000+</div><div class="l">All-time blog visits</div></div>
+      </div>
+      <div style="margin-top:26px">
+        <a class="btn btn-p" href="https://yazdankm.wordpress.com" target="_blank" rel="noopener">Visit the blog →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow">Toolkit</span>
+    <h2>Skills &amp; tools</h2>
+    <p class="lede">Certified where it counts: Google Ads Search, Google Business Intelligence, Google Data Analytics, IBM AI Fundamentals.</p>
+
+    <div class="skillgroup">
+      <h4>Paid media &amp; performance</h4>
+      <div class="tags">
+        <span class="tag hot">Meta Ads Manager</span><span class="tag hot">Google Ads (Search)</span>
+        <span class="tag">TikTok Ads</span><span class="tag">LinkedIn Ads</span><span class="tag">X / Twitter Ads</span>
+        <span class="tag">Threads Ads</span><span class="tag">WhatsApp Ads</span>
+        <span class="tag hot">A/B testing</span><span class="tag">Audience segmentation</span>
+        <span class="tag">Budget allocation</span><span class="tag">Conversion optimisation</span>
+        <span class="tag">Full-funnel strategy</span><span class="tag">Creative strategy</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h4>Analytics &amp; data</h4>
+      <div class="tags">
+        <span class="tag hot">Python (Pandas, NumPy)</span><span class="tag hot">SQL</span>
+        <span class="tag">Google Analytics</span><span class="tag">Meta Business Suite</span>
+        <span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Excel / Sheets</span>
+        <span class="tag">Dashboard design</span><span class="tag">Cohort &amp; funnel analysis</span>
+        <span class="tag">Statistical modelling</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h4>Content &amp; community</h4>
+      <div class="tags">
+        <span class="tag hot">Editorial strategy</span><span class="tag hot">Brand storytelling</span>
+        <span class="tag">Copywriting</span><span class="tag">Newsletter growth</span>
+        <span class="tag">Community management</span><span class="tag">Content moderation at scale</span>
+        <span class="tag">SEO &amp; social SEO</span><span class="tag">Organic growth</span>
+        <span class="tag">Canva</span><span class="tag">Adobe Creative Suite</span><span class="tag">Video editing</span>
+        <span class="tag">WordPress</span><span class="tag">HTML / CSS</span>
+      </div>
+    </div>
+
+    <div class="skillgroup">
+      <h4>Languages</h4>
+      <div class="tags">
+        <span class="tag">English - professional</span><span class="tag">German - intermediate</span><span class="tag">Persian - native</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Looking for someone who can run the ads and write the copy?</h2>
+    <p class="lede">I'm open to full-time marketing roles in Berlin or remote, and take on selected freelance work. Happy to talk through your funnel either way.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn btn-p" href="mailto:yazdan.mohammadjani@gmail.com?subject=Hello%20Yazdan">Send me an email</a>
+      <a class="btn btn-s" href="https://www.linkedin.com/in/yazdankm/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Yazdan Kafush - Berlin</span>
+    <span><a href="https://yazdankm.wordpress.com" target="_blank" rel="noopener" style="color:var(--muted)">yazdankm.wordpress.com</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// reveal on scroll
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='none'; io.unobserve(e.target);} });
+},{threshold:.08});
+document.querySelectorAll('.card,.case,.blogpanel,.skillgroup,.stat').forEach(el=>{
+  el.style.opacity=0; el.style.transform='translateY(14px)';
+  el.style.transition='opacity .55s ease, transform .55s ease';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
